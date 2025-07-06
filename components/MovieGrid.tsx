@@ -26,7 +26,6 @@ export default function MovieGrid() {
   const [debouncedQuery, setDebouncedQuery] = useState(query);
   const [favorites, setFavorites] = useState<any[]>([]);
 
-  // Sync favorites on mount and when page becomes visible again
   useEffect(() => {
     const syncFavorites = () => {
       const stored = localStorage.getItem("favorites-data");
